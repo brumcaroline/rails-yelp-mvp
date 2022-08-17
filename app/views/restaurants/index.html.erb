@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container d-flex justify-content-between align-items-center">
+  <h1>Restaurants</h1>
+  <%= link_to 'Create A Restaurant', new_restaurant_path, class: "btn btn-outline-primary" %>
+</div>
+
+
+<% @restaurants.each do |restaurant| %>
+  <div class="container my-4">
+    <h2><%= link_to  restaurant.name, restaurant_path(restaurant) %></h2>
+  </div>
+<% end %>

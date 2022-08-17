@@ -1,0 +1,15 @@
+<%= simple_form_for(restaurant) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name, placeholder: "Write the restaurant name here" %>
+    <%= f.input :address, placeholder: "Write the restaurant name here" %>
+    <%= f.input :phone_number, placeholder: "Write the phone number here" %>
+    <%= f.input :category, collection: Restaurant::CATEGORY %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit class: "btn btn-outline-success mt-3" %>
+  </div>
+
+<% end %>

@@ -1,0 +1,12 @@
+  <div class="container my-4">
+    <p><strong>Address:</strong> <%= @restaurant.address %></p>
+    <p><strong>Phone Number: </strong> <%= @restaurant.phone_number %></p>
+    <p><strong>Category:</strong> <%= @restaurant.category %></p>
+
+    <% @restaurant.reviews.each do |review| %>
+    <p><strong>Review:</strong> <%= review.content %> | <strong>Rating: </strong> <%= review.rating %></p>
+    <% end %>
+
+    <%= link_to "Create Review", new_restaurant_review_path(@restaurant), class: "btn btn-outline-secondary mt-3" %>
+    <%= link_to "Return", restaurants_path, class: "btn btn-outline-secondary mt-3" %>
+  </div>
